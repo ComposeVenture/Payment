@@ -22,13 +22,11 @@ DISPLAY('',`
 
        <button class='forestgreen'>Invest Now</button>
 
-       
-    
     </div>
 
     <header>
 
-        <h1 class='AppName'>LacerTradex</h1>
+        <h1 class='AppName'>LacerFund</h1>
 
         <img  class='RightedIcon' src='./WhiteIcons/menu.png'/>
     
