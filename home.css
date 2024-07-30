@@ -1,0 +1,53 @@
+.RightedIcon{
+    margin-right: 0.5rem;
+}
+
+.AppName{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 23px;
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+.AppLogo{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.MessagingDiv{
+    position: relative;
+    width: 50%;
+    height: 35%;
+    top: 10%;
+    left: 2%;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.Image{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 15%;
+    right: 2%;
+    border-radius: 10px;
+    background: transparent; 
+}
+
+.Invest2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0
+}
+
+.SimpleMessage{
+    color: blue;
+}
+
+.HomeDiv{
+    background: transparent;
+    overflow-y: auto;
+}
