@@ -53,3 +53,7 @@ const WEBSITE=(url)=>{window.open(url)};
 const WHATSAPP=(phoneNumber)=>{var whatsappLink='https://wa.me/'+encodeURIComponent(phoneNumber);window.open(whatsappLink)};
 const YOUTUBE=(query)=>{var youtubeLink='https://www.youtube.com/results?search_query='+encodeURIComponent(query);window.open(youtubeLink)};
 const ZOOM=()=>{document.addEventListener('touchstart',function (event){if (event.touches.length>1){event.preventDefault()}},{passive:false});document.addEventListener('wheel',function (event){if ((event.ctrlKey || event.metaKey) && !event.shiftKey){event.preventDefault()}})};
+
+
+const CLICKED=(selector,callback)=>{const element=document.querySelector(selector);EVENT(element,"click",()=>{callback()})};
+const NETWORKED=()=>{NETWORKSTATE((data)=>{CONDITION(data===true,()=>STORE('local','NetWork','ON'),()=>REMOVESTORE('local','NetWork'))})};

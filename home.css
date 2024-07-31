@@ -80,3 +80,24 @@
 .Floaters:hover{
     color: black;
 }
+
+.MenuDiv{
+    width: 50%;
+    right: 0;
+    top: 40px;
+    height: 300px;
+    display: none;
+    background: black;
+}
+
+.LeftedText{
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.AppLogo1{
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+}

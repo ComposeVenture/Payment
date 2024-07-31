@@ -45,9 +45,9 @@ DISPLAY('',`
 
             <div class='divholder'>
 
-                <p class='Floaters'>Login<p>
+                <p id='Login' class='Floaters'>Login<p>
 
-                <p class='Floaters'>Create Account</p>
+                <p id='CreateAccount' class='Floaters'>Create Account</p>
              
             </div>
 
@@ -75,8 +75,114 @@ DISPLAY('',`
 
         <h1 class='AppName'>LacerFund</h1>
 
-        <img  class='RightedIcon' src='./WhiteIcons/menu.png'/>
+        <img id='MenuIcon'  class='RightedIcon' src='./WhiteIcons/menu.png'/>
     
     </header>
 
+    <div class='MenuDiv'></div>
+
 `);
+
+CLICKED('#MenuIcon',()=>{
+
+    if (localStorage.getItem('Menu')) {
+
+        DELETESTORAGE('local','Menu');
+
+        DECLARATION('.MenuDiv',(ELEMENT)=>{
+
+            STYLED(ELEMENT,'display','none')
+
+        })
+        
+    } else {
+
+        STORE('local','Menu','ON');
+        
+        DECLARATION('.MenuDiv',(ELEMENT)=>{
+
+            STYLED(ELEMENT,'display','block');
+
+            DISPLAY(ELEMENT,`
+
+                <p class='LeftedText'>Stock Market </p>
+
+                <p class='LeftedText'>Trending </p>
+                
+                <p class='LeftedText'>My Account</p>
+
+                <p class='LeftedText'>Packages</p>
+
+                <p class='LeftedText'>About Us</p>
+
+                <p class='LeftedText'>Privacy Policy</p>
+
+                <p class='LeftedText'>Contacts Us</p>
+
+            `);
+
+        })
+
+    }
+
+
+});
+
+
+CLICKED('#Login',()=>{
+
+    DISPLAY('',`
+
+        <img class='AppLogo1' src='./Images/invest.jpg'/>
+
+        <h1>Lacer Fund</h1>
+
+        <p>Start Investing Today By Loging Into Your Account</p>
+
+        <input type='email' placeholder='Enter Email' >
+
+        <input type='password' placeholder='Enter Password' >
+
+        <button class='forestgreen'>LogIn</button>
+
+        <button class='blue'>Create Account</button>
+
+        <button id='Reload' class='teal'>Back</button>
+        
+    `);
+
+    CLICKED('#Reload',()=>{
+        location.href=('./index.html');
+    })
+
+})
+
+CLICKED('#CreateAccount',()=>{
+
+    DISPLAY('',`
+
+        <img class='AppLogo1' src='./Images/invest.jpg'/>
+
+        <h1>Lacer Fund</h1>
+
+        <p>Start Investing Today By Loging Into Your Account</p>
+
+        <input type='text' placeholder='Enter User Name' >
+
+        <input type='email' placeholder='Enter Email' >
+
+        <input type='password' placeholder='Enter Password' >
+
+        <button class='forestgreen'>Create Account</button>
+
+        <button id='Login' class='blue'>LogIn</button>
+
+        <button id='Reload' class='teal'>Back</button>
+        
+    `);
+
+    CLICKED('#Reload',()=>{
+        location.href=('./index.html');
+    })
+
+})
