@@ -133,22 +133,24 @@ CLICKED('#Login',()=>{
 
     DISPLAY('',`
 
-        <img class='AppLogo1' src='./Images/invest.jpg'/>
+        <img class='AppLogo1' src='./Images/bs.png'/>
 
-        <h1>Lacer Fund</h1>
+        <div>
 
-        <p>Start Investing Today By Loging Into Your Account</p>
+            <h1>Lacer Fund</h1>
 
-        <input type='email' placeholder='Enter Email' >
+            <p>Start Investing Today By Loging Into Your Account</p>
 
-        <input type='password' placeholder='Enter Password' >
+            <input type='email' placeholder='Enter Email' >
 
-        <button class='forestgreen'>LogIn</button>
+            <input type='password' placeholder='Enter Password' >
 
-        <button class='blue'>Create Account</button>
+            <button class='forestgreen'>LogIn</button>
 
-        <button id='Reload' class='teal'>Back</button>
+            <button id='Reload' class='teal'>Back</button>
         
+        </div>
+
     `);
 
     CLICKED('#Reload',()=>{
@@ -161,23 +163,25 @@ CLICKED('#CreateAccount',()=>{
 
     DISPLAY('',`
 
-        <img class='AppLogo1' src='./Images/invest.jpg'/>
+        <img class='AppLogo1' src='./Images/bs.png'/>
 
-        <h1>Lacer Fund</h1>
+        <div>
 
-        <p>Start Investing Today By Loging Into Your Account</p>
+            <h1>Lacer Fund</h1>
 
-        <input type='text' placeholder='Enter User Name' >
+            <p>Start Investing Today By Loging Into Your Account</p>
 
-        <input type='email' placeholder='Enter Email' >
+            <input type='text' placeholder='Enter User Name' >
 
-        <input type='password' placeholder='Enter Password' >
+            <input type='email' placeholder='Enter Email' >
 
-        <button class='forestgreen'>Create Account</button>
+            <input type='password' placeholder='Enter Password' >
 
-        <button id='Login' class='blue'>LogIn</button>
+            <button class='forestgreen'>Create Account</button>
 
-        <button id='Reload' class='teal'>Back</button>
+            <button id='Reload' class='teal'>Back</button>
+        
+        </div>
         
     `);
 
