@@ -11,6 +11,9 @@ DISPLAY('',`
             <h3>Money Building</h3>
 
             <p>Your Money Growing Platform</p>
+
+            <p>Get 300Kshs Bonus When You make Your First Deposit </p>
+
        
        </div>
 
@@ -147,7 +150,7 @@ CLICKED('#Login',()=>{
 
             <input type='password' placeholder='Enter Password' >
 
-            <button class='forestgreen'>LogIn</button>
+            <button id='LoginUser' class='forestgreen'>LogIn</button>
 
             <button id='Reload' class='teal'>Back</button>
         
@@ -156,6 +159,12 @@ CLICKED('#Login',()=>{
     `);
 
     CLICKED('#Reload',()=>{
+        location.href=('./index.html');
+    })
+
+    CLICKED('#LoginUser',()=>{
+
+        STORE('local','User','On')
         location.href=('./index.html');
     })
 
@@ -179,7 +188,7 @@ CLICKED('#CreateAccount',()=>{
 
             <input type='password' placeholder='Enter Password' >
 
-            <button class='forestgreen'>Create Account</button>
+            <button id='CreateUser' class='forestgreen'>Create Account</button>
 
             <button id='Reload' class='teal'>Back</button>
         
@@ -191,4 +200,56 @@ CLICKED('#CreateAccount',()=>{
         location.href=('./index.html');
     })
 
-})
+    CLICKED('#CreateUser',()=>{
+
+        STORE('local','User','On')
+        location.href=('./index.html');
+    })
+
+});
+
+if (localStorage.getItem('User')) {
+
+    DISPLAY('',`
+
+        <div id='MyDiv' class='HomeDiv'>
+    
+            <p>Welcome User</p>
+
+            <h3>Your Account Balance Is:</h3>
+
+            <p>0Kshs</p>
+
+            <p>Get 300Kshs Bonus On First Deposit </p>
+
+                <p class='DepositNowBlue'>Deposit Now</p>
+
+            <button>Buy Package</button>
+
+            <button>Widthraw</button>
+
+            <button>Deposit</button>
+
+            <p id='LogOut'>Logout My Account!</p>
+
+        </div>
+    
+        <header>
+    
+            <h1 class='AppName'>LacerFund</h1>
+     
+            <p class='RightedText'>Buy Stocks</p>
+        
+        </header>
+    
+    `);
+
+    CLICKED('#LogOut',()=>{
+
+        DELETESTORAGE('local','User');
+
+        location.href=('./index.html');
+
+    })
+    
+} 
