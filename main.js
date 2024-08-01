@@ -1,3 +1,5 @@
+APPMODE('','','green');
+
 DISPLAY('',`
 
     <div class='HomeDiv'>
